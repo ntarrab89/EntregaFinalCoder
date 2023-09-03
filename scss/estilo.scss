@@ -1,112 +1,25 @@
+@import url(./_var.scss);
+@import "var";
+@import "footer";
+@import "header";
+@import "fonts";
+@import "pageIndex";
+@import "sidePages";
+@import "animacion";
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    margin-bottom: 0px;
-    height: 8vh;
-    background-color: black;
-    color: white;
-    nav{
-        ul{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            font-size: 2rem;
-            a{
-                text-decoration: none;
-                color: white;
-                &:hover{
-                    color:  rgba(236, 208, 49, 0.836);
-                }
-            }
-            li{
-                padding: 0 20px;
-                list-style: none;
-            }
-        }
-    }
-}
+
 .seleccionado{
     color:#e9d149;
 }
-.fuenteCursiva{
-    font-family: 'Lobster', cursive;
-}
-.fuenteTitulo{
-    font-family: 'Itim', cursive;
-    font-size: 3rem;
-}
-.fuenteTexto{
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-size: 1.8rem;
-}
-.sizeFooter{
-    font-size: 1.3rem;
-}
+
 .sinFormato{
     text-decoration: none;
     color: white;
-}
-.mainIndex{
-    height: 84vh;
-    img{
-        position: absolute;
-        height: 10vh;
-        width: 5vw;
-        top: 45vh;
-        left: 47.5vw;
-    }
-}
-
-.backgroundPages{
-    background: url("../img/backgroundImg.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-.mainProjects{
-    margin: auto;
-    width: 80%;
-}
-.mainGallery{
-    width: 75%;
-    height: 84vh;
-    margin: auto;
-    background-color: rgba(128, 128, 128, 0.527);
-    h2{
-        font-size: 4rem;
-    }
-}
-.mainUs{
-    width: 70%;
-    margin: auto;
-    h2{
-        font-size: 4rem;
-    }
-
-}
-.boxUs{
-    height: 33%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.mainContact{
-    padding-top: 3%;
-    height: 90%;
-    background-color: rgba(128, 128, 128, 0.808);
-    width: 70%;
-    margin: auto;
-    img{
-        width: 120px;
-    }
 }
 .fixedBg{
     height: 84vh;
@@ -114,6 +27,10 @@ header{
         background-repeat: no-repeat;
         background-size: 100% 100%;
 }
+.fitImg{
+    width: 100%;
+}
+
 .box{
     height: 42vh;
 }
@@ -123,100 +40,29 @@ h1{
     color:  black;
     padding: 3%;
 }
-.boxIndex{
-    background-repeat:no-repeat;
-    background-size: 100% 100%;
-    opacity: .5;
-    h1{
-        visibility: hidden;
-    }
-    &:hover{
-        opacity: 0.7;
-        h1{
-            visibility:visible;
-        }
-    }
-}
 
-.nos1{
-    background: url(../img/nos1.jpg);
-    background-repeat: no-repeat;
-}
-.nos2{
-    background: url(../img/nos2.jpg);
-    background-repeat: no-repeat;
-}
-.nos3{
-    background: url(../img/nos3.jpg);
-    background-repeat: no-repeat;
-}
-.colorNos{
-    padding: 30px;
-}
+
 
 .borderRound{
     padding: 10px 0;
     border-radius: 15px;
 }
-.carousel {
-    width: 1000px;
-    height: 600px;
-  }
-.box1{
-    background-image: url(../img/img1.jpg);
-}
-.box2{
-    background-image: url(../img/img2.jpg);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
 
-.box3{
-    background-image: url(../img/img3.jpg);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-.box4{
-    background-image: url(../img/img4.jpg);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
 .formatoImg{
     visibility: visible;
+    width: 100%;
 }
 
-footer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: aquamarine;
-    height: 100px;
-    line-height: 0.55rem;
-    background: linear-gradient(rgb(82, 82, 82),rgb(155, 154, 154));
-}
-.redes{
-    font-weight:400;
-    color: antiquewhite;
-    img{
-        width: 40px;
-    }
-}
+
 .listaSinFormato{
     list-style-type: none;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     ul{
-        padding: 20px 0;
+        padding: 5px 0;
         &:hover{
             background-color: white;
-            border-radius: 20px;
+            border-radius: $borderRadius;
+            animation: cambiarColor 1s ease-in-out infinite;
         }
     }
 }
@@ -229,7 +75,6 @@ footer{
 .paddingForm{
     padding: 20px;
 }
-
 @media (max-width: 1100px) {
     header{
         nav{
@@ -254,28 +99,22 @@ footer{
         align-items: center;
     }
     .fuenteTexto{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-    .formatoImg{
-        width: 100px;
-    }
-    .fuenteTitulo{
-        font-size: 2rem;
-    }
+    .navitem{
+    visibility: hidden;
+}
+
     .mainProjects{
-        width: 90%;
+        width: 95%;
     }
-    .carousel {
-        width: 600px;
-        height: 400px;
-      }
     .fuenteCursiva{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .mainGallery{
         width: 90%;
     }
-    .mainContact{
+    .containerContact{
         width: 80%;
         img{
             width: 80px;
@@ -283,13 +122,18 @@ footer{
     }
 }
 @media (max-width: 800px) {
+    header{
+        height: 100px;
+    }
     h3{
         font-size: 1.2rem;
     }
     h1{
         font-size: 5rem;
     }
-
+    .fitImg{
+        width: 80%;
+    }
     .boxIndex{
         h1{
             visibility: visible;
@@ -301,13 +145,21 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    main{
-        img{
-            visibility: hidden;
+    .paddingForm{
+        padding: 10px;
+    }
+    .rect{
+        animation:none
+    }
+    .listaSinFormato{
+        line-height: 1.2rem;
+        ul{
+            padding: 0px 0;
         }
     }
+
     .formatoImg{
-        width: 80px;
+        width: $fotoMedia;
     }
 
     h1{
@@ -329,35 +181,44 @@ footer{
         font-size: 1.8rem;
     }
     .mainProjects{
-        width: 95%;
+        width: 100%;
     }
     .mainGallery{
-        width: 95%;
+        width: 100%;
     }
-    .carousel {
-        width: 450px;
-        height: 280px;
-      }
-      .mainContact{
+      .containerContact{
         width: 90%;
         img{
             width: 80px;
         }
     }
+    .mainIndex{
+        img{
+            visibility: hidden;
+        }
+    }
 }
 
 @media (max-width: 400px) {
-    .mainContact{
+    .fuenteBanner{
+        font-size: 2.5rem;
+
+    }
+    .containerContact{
         width: 100%;
         img{
             width: 40px;
         }
     }
-    .mainGallery{
-        width: 100%;
+    .formatoImg{
+        width: $fotoChica;
     }
+
     .mainProjects{
         width: 100%;
+    }
+    .mainUs{
+        width: 95%;
     }
     .fuenteTexto{
         font-size: 0.8rem;
@@ -366,7 +227,8 @@ footer{
         font-size: 1.2rem;
     }
     .fuenteCursiva{
-        font-size: 1rem;
+        font-size: 1rem
+;
     }
     header{
         div{

@@ -1,0 +1,21 @@
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: aquamarine;
+    height: 100px;
+    line-height: 0.55rem;
+    background: linear-gradient(rgb(82, 82, 82),rgb(155, 154, 154));
+}
+.redes{
+    font-weight:400;
+    color: antiquewhite;
+    img{
+        width: 40px;
+    }
+}
+.sizeFooter{
+    font-size: 1.3rem;
+}

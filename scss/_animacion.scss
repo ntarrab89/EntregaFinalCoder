@@ -1,0 +1,26 @@
+@keyframes cambiarColor {
+    0% {
+      color: black;
+    }
+    50% {
+      color: rgb(108, 97, 6);
+    }
+    100% {
+      color: black;
+    }
+  }
+
+  @keyframes cambiarColorBanner {
+    0% {
+      color: yellow;
+    }
+    50% {
+      color: orange;
+    }
+    100% {
+      color: yellow;
+    }
+  }
+  .rect {
+    animation: cambiarColor 3s ease-in-out infinite;
+  }
