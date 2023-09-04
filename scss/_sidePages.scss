@@ -59,8 +59,7 @@
 
 .box2{
     background-image: url(../img/img2.jpg);
-    display: flex;
-    flex-direction: row;
+    @include flex-text;
     justify-content: flex-end;
     align-items: flex-start;
     background-size: cover;
@@ -68,8 +67,7 @@
 
 .box3{
     background-image: url(../img/img3.jpg);
-    display: flex;
-    flex-direction: row;
+    @include flex-text;
     justify-content: flex-start;
     align-items: flex-end;
     background-size: cover;
@@ -77,8 +75,7 @@
 
 .box4{
     background-image: url(../img/img4.jpg);
-    display: flex;
-    flex-direction: row;
+    @include flex-text;
     justify-content: flex-end;
     align-items: flex-end;
     background-size: cover;
